@@ -7,6 +7,10 @@ one I care about in my day-to-day work: build for the reader, human or machine.
 Semantic markup, accessibility, and performance are what make a page good — and
 they're also what make it readable by AI answer engines.
 
+## Status
+
+Early scaffold. `website/` and `agent/` are planned but not yet implemented — see [`CLAUDE.md`](./CLAUDE.md) for the intended stack and conventions.
+
 ## What's in here
 
 ### `website/`
