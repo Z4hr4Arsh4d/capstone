@@ -1,0 +1,84 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Site preferences — Zahra Arshad</title>
+  <meta name="description" content="Set your display name, email, theme, and notification preferences." />
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+  <main>
+    <h1>Site preferences</h1>
+    <p class="intro">
+      These settings are saved in this browser only. Nothing is sent to a server.
+    </p>
+
+    <div id="form-status" class="form-status" role="status" aria-live="polite"></div>
+
+    <form id="settings-form" novalidate>
+      <div class="field">
+        <label for="display-name">Display name</label>
+        <input
+          type="text"
+          id="display-name"
+          name="displayName"
+          autocomplete="name"
+          required
+          minlength="2"
+          maxlength="50"
+          aria-describedby="display-name-error"
+        />
+        <p id="display-name-error" class="error-message" aria-live="polite"></p>
+      </div>
+
+      <div class="field">
+        <label for="email">Email</label>
+        <input
+          type="email"
+          id="email"
+          name="email"
+          autocomplete="email"
+          required
+          aria-describedby="email-error"
+        />
+        <p id="email-error" class="error-message" aria-live="polite"></p>
+      </div>
+
+      <fieldset id="theme-group">
+        <legend>Theme</legend>
+        <label class="choice-label">
+          <input type="radio" name="theme" value="light" required />
+          Light
+        </label>
+        <label class="choice-label">
+          <input type="radio" name="theme" value="dark" required />
+          Dark
+        </label>
+        <label class="choice-label">
+          <input type="radio" name="theme" value="system" required />
+          Match system
+        </label>
+        <p id="theme-error" class="error-message" aria-live="polite"></p>
+      </fieldset>
+
+      <fieldset>
+        <legend>Notifications</legend>
+        <label class="choice-label">
+          <input type="checkbox" name="notifyProduct" value="product" />
+          Product updates
+        </label>
+        <label class="choice-label">
+          <input type="checkbox" name="notifySecurity" value="security" />
+          Security alerts
+        </label>
+        <p class="hint">Optional — leave both unchecked to receive nothing.</p>
+      </fieldset>
+
+      <button type="submit">Save preferences</button>
+    </form>
+  </main>
+
+  <script src="js/settings.js"></script>
+</body>
+</html>
