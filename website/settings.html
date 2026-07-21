@@ -1,0 +1,70 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Account Settings</title>
+  <meta name="description" content="Update your account settings.">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <main>
+    <h1>Account Settings</h1>
+
+    <form id="settings-form" novalidate>
+      <fieldset>
+        <legend>Profile and playback preferences</legend>
+
+        <div class="field">
+          <label for="display-name">Display name</label>
+          <input
+            type="text"
+            id="display-name"
+            name="displayName"
+            aria-describedby="display-name-error"
+            aria-invalid="false"
+            autocomplete="name"
+            required
+          >
+          <p id="display-name-error" class="error" role="alert"></p>
+        </div>
+
+        <div class="field">
+          <label for="email">Email</label>
+          <input
+            type="email"
+            id="email"
+            name="email"
+            aria-describedby="email-error"
+            aria-invalid="false"
+            autocomplete="email"
+            required
+          >
+          <p id="email-error" class="error" role="alert"></p>
+        </div>
+
+        <div class="field">
+          <label for="playlist-size">Default playlist size</label>
+          <input
+            type="number"
+            id="playlist-size"
+            name="playlistSize"
+            aria-describedby="playlist-size-error playlist-size-hint"
+            aria-invalid="false"
+            min="5"
+            max="50"
+            step="1"
+            required
+          >
+          <p id="playlist-size-hint" class="hint">Enter a whole number from 5 to 50.</p>
+          <p id="playlist-size-error" class="error" role="alert"></p>
+        </div>
+      </fieldset>
+
+      <button type="submit" id="submit-button" disabled>Save settings</button>
+    </form>
+  </main>
+
+  <script type="module" src="js/settings.js"></script>
+</body>
+</html>
